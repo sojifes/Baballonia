@@ -90,6 +90,10 @@ public partial class HomePageViewModel : ViewModelBase, IDisposable
             var preferredCapture = _localSettingsService.ReadSetting<string>("LastOpenedPreferredCapture" + Name);
             if (preferredCapture == "Default") preferredCapture = Assets.Resources.Home_Backend_Default;
 
+            // Default face camera address
+            if (displayAddress == null && Camera == Camera.Face)
+                displayAddress = "http://etvr-mouth.local/";
+
             UpdateCameraDropDown(cameras);
             DisplayAddress = displayAddress;
             FlipHorizontally = camSettings.UseHorizontalFlip;
