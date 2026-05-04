@@ -31,7 +31,7 @@
 
 ;--------------------------------
 ;Compression
-  SetCompressor lzma
+  SetCompressor /SOLID lzma ; "/FINAL" can be added to prevent anything from changing this later down the line.
   SetCompressorDictSize 32
   FileBufSize 64
   ManifestDPIAware true
