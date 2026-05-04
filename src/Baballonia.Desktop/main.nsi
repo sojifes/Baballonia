@@ -27,6 +27,7 @@
   InstallDir "$LOCALAPPDATA\${NAME}"
   InstallDirRegKey HKCU "Software\${NAME}" ""
   RequestExecutionLevel user
+  Target "amd64-unicode"  ; 64-bit
 
 ;--------------------------------
 ;Compression
