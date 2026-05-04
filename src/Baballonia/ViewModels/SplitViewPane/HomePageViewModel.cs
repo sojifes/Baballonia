@@ -91,10 +91,11 @@ public partial class HomePageViewModel : ViewModelBase, IDisposable
             if (preferredCapture == "Default") preferredCapture = Assets.Resources.Home_Backend_Default;
 
             // Default face camera address and backend
-            if (displayAddress == null && Camera == Camera.Face)
+            if (string.IsNullOrEmpty(displayAddress) && Camera == Camera.Face)
             {
                 displayAddress = "http://etvr-mouth.local/";
-                preferredCapture ??= "Wireless/IP Camera";
+                if (string.IsNullOrEmpty(preferredCapture))
+                    preferredCapture = "Wireless/IP Camera";
             }
 
             UpdateCameraDropDown(cameras);
