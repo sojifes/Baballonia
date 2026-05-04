@@ -151,6 +151,9 @@
 		    <LastGenOutput>Resources.pl.Designer.cs</LastGenOutput>
             <LogicalName>Baballonia.Assets.Resources.pl.resources</LogicalName>
 		</EmbeddedResource>
+		<EmbeddedResource Update="Assets\Resources.zh-CN.resx">
+            <LogicalName>Baballonia.Assets.Resources.zh-CN.resources</LogicalName>
+		</EmbeddedResource>
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\Baballonia.FastCorruptionDetector\Baballonia.FastCorruptionDetector.csproj" />
